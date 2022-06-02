@@ -6,10 +6,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaisModule } from './pais/pais.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { TablaComponent } from './components/tabla/tabla.component';
 
 @NgModule({
-  declarations: [AppComponent, TablaComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     NgbModule,

@@ -8,14 +8,14 @@ import { Pais } from '../../interfaces/pais.interface';
   styles: [],
 })
 export class PorPaisComponent {
-  termino: string = '';
   error: boolean = false;
   paises: Pais[] = [];
+  termino: string = '';
 
-  buscar() {
+  buscar(termino: string) {
+    this.termino = termino;
     this.error = false;
-
-    this.paisService.buscarPais(this.termino).subscribe(
+    this.paisService.buscarPais(termino).subscribe(
       (data) => {
         this.paises = data;
       },
@@ -24,5 +24,6 @@ export class PorPaisComponent {
       }
     );
   }
+
   constructor(private paisService: PaisService) {}
 }

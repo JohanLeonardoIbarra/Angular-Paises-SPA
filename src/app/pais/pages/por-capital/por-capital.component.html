@@ -1,1 +1,15 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr />
+<div class="row">
+  <div class="col">
+    <app-pais-busqueda (busqueda)="buscar($event)"></app-pais-busqueda>
+  </div>
+  <div *ngIf="error" class="alert alert-danger">
+    No se encontro nada en el termnio {{ termino }}
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </div>
+</div>
